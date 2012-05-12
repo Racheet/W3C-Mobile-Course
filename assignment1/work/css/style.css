@@ -7,16 +7,16 @@ audio, canvas, video { display: inline-block; *display: inline; *zoom: 1; }
 audio:not([controls]) { display: none; }
 [hidden] { display: none; }
 
-html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
-html, button, input, select, textarea { font-family: sans-serif; color: #222; }
-body { margin: 0; font-size: 1em; line-height: 1.4; }
+html { background-color: grey; font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
+html, button, input, select, textarea { font-family: "Palatino Linotype", Palatino, Palladio, "URW Palladio L", "Book Antiqua", Baskerville, "Bookman Old Style", "Bitstream Charter", "Nimbus Roman No9 L", Garamond, "Apple Garamond", "ITC Garamond Narrow", "New Century Schoolbook", "Century Schoolbook", "Century Schoolbook L", Georgia, serif; color:#000; }
+body { margin: 0; font-size: 1em; line-height: 1.6; }
 
 ::-moz-selection { background: #fe57a1; color: #fff; text-shadow: none; }
 ::selection { background: #fe57a1; color: #fff; text-shadow: none; }
 
 a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a:visited { color: #000; }
+a:hover { color: #000; }
 a:focus { outline: thin dotted; }
 a:hover, a:active { outline: 0; }
 
@@ -69,16 +69,84 @@ td { vertical-align: top; }
 
 
 /* ===== Primary Styles ========================================================
-   Author:
    ========================================================================== */
+/* Navigation */
+#leftnav ul a {
+    display: block;
+    padding: 3px;
+    width: 160px;
+    border-bottom: 1px solid #906030
+}
 
 
+#leftnav ul a:link, #leftnav ul a:visited {
+    text-decoration:none;    
+}
 
+#leftnav ul a:hover {
+    background-color: #369;
+}
+    
+header ul {
+    white-space: nowrap;    
+}
 
+header ul li {
+    display:inline;    
+    
+}
 
+header ul li a {
+    padding: 0px 10px;    
+}
 
+header ul li a:visited, header ul li a:link {
+    background-color: #906030;    
+    text-decoration: none;
+}
 
+header ul li a:hover {
+    background-color: #369;
+    text-decoration: none;
+    
+}
+/* Layout */
 
+body {
+    width: 70%;
+    margin: 10px auto;
+    background-color:#e3a746;
+    border: 1px solid #906030;
+}
+
+header {
+    background-color: #906030;
+}
+
+#leftnav {
+    float:left;
+    width:20%;
+    max-width:11em;
+    margin-left:0.5em
+}
+
+.boxout {
+    float:right;
+    width:20%;
+    max-width:11em;
+    border: 1px solid #906030;
+    padding: 0em 1em;
+    margin-right:1em;
+    font-size:0.85em;
+    line-height:1.4;
+}
+
+div#content {
+    margin-left:20%;
+    margin-right:20%;
+}
+
+/* Tweaks */
 
 
 
