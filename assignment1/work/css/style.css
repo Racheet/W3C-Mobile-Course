@@ -73,8 +73,7 @@ td { vertical-align: top; }
 /* Navigation */
 #leftnav ul a {
     display: block;
-    padding: 3px;
-    width: 160px;
+    padding: 0.2em;
     border-bottom: 1px solid #906030
 }
 
