@@ -113,6 +113,7 @@ header ul li a:hover {
 /* Layout */
 
 body {
+    height: 19em;
     width: 70%;
     margin: 10px auto;
     background-color:#e3a746;
@@ -127,7 +128,7 @@ header {
     float:left;
     width:20%;
     max-width:11em;
-    margin-left:0.5em
+    margin-left:0.5em;
 }
 
 .boxout {
@@ -142,14 +143,43 @@ header {
 }
 
 div#content {
+    margin-top:1.5em;
     margin-left:20%;
     margin-right:20%;
+    margin-bottom:1.5em;
 }
 
-/* Tweaks */
+footer {
+    clear:both;
+}
 
+/* Page Styles */
 
+/* Homepage */
 
+div#content h1 {
+    margin-top:0;
+}
+
+/* Exchange money page */
+
+form#exhange-money {
+    margin: 0 1em 1em 1em;   
+}
+
+form div {
+    margin: 0.5em 0;
+}
+
+form label {
+    width: 4.5em;
+    float: left;
+}
+
+form#Buy-Gold label {
+    width: 8em;
+    float: left;
+}
 /* =============================================================================
    Media Queries
    ========================================================================== */
@@ -168,7 +198,7 @@ div#content {
 .visuallyhidden { border: 0; clip: rect(0 0 0 0); height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; }
 .visuallyhidden.focusable:active, .visuallyhidden.focusable:focus { clip: auto; height: auto; margin: 0; overflow: visible; position: static; width: auto; }
 .invisible { visibility: hidden; }
-.clearfix:before, .clearfix:after { content: ""; display: table; }
+.clearfix:after { content: ""; display: table; }
 .clearfix:after { clear: both; }
 .clearfix { *zoom: 1; }
 
