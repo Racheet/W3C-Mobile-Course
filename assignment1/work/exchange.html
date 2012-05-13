@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Exchange Your Currencies</title>
+	<meta name="viewport" content="width=device-width">
+	<link rel="stylesheet" href="css/style.css">
+	<script src="js/libs/modernizr-2.5.3.min.js"></script>
+</head>
+
+<body>
+<header>
+    <nav>
+        <ul id="topnav">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="rates.html">Rates</a></li>
+            <li><a href="http://www.nyse.com/">Wall Street Official Site</a></li>
+        </ul>
+    </nav>
+</header>
+<div role="main">
+    <nav id="leftnav">
+        <ul>
+            <li><a href="exchange.html">Exchange Currencies</a></li>
+            <li><a href="buy.html">Buy Gold</a></li>
+        </ul>
+    </nav>
+    <div class="boxout">
+        <p>Get 10% off your next subscription to any W3C training course:</p>
+        <p>Provide the promotion code "W3C_Rules" during your next subscription</p>        
+    </div>
+    <div id="content" class="clearfix">
+        <form id="exchange-money" action="thanks.html" method="get">
+            <div>   
+                <label for="GET-amount">Amount:</label>
+                <input id="GET-amount" type="number" required="true"/>
+            </div>
+            <div>
+                <label for="GET-initial-currency">Currency:</label>
+                    <select id="GET-initial-currency">
+                        <option>USD</option>
+                        <option>EURO</option>
+                        <option>YEN</option>
+                    </select>
+            </div>
+            <div>
+                <label for="GET-target-currency">To:</label>
+                    <select id="GET-target-currency">
+                        <option>USD</option>
+                        <option>EURO</option>
+                        <option>YEN</option>
+                    </select>
+            </div>
+            <div>
+                <button>Cancel</button>
+                <input type="submit" value="Proceed" />
+            </div>
+        </form>
+    </div>
+
+</div>
+<footer>
+
+</footer>
+
+<script src="js/script.js"></script>
+</body>
+</html>
