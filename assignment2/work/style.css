@@ -1,5 +1,7 @@
 html, body { margin: 0; padding: 0; background-color:black;}
 body { padding-bottom: 20px; text-align: center; font-size: 16px; line-height:1.3;}
+ul { padding:0; margin: 1em 0;}
+
 
 #container {
 	text-align: left;
@@ -65,17 +67,14 @@ div.sidebar ul li:hover{
 	background-color:grey;
 }
 
+div.sidebar ul li.submenu {
+	padding-left:1em;
+}
+
 blockquote, p.topcontent {
 	text-align:left;
 }
 
-ul {
-	padding: 0;
-}
-
-div.sidebar ul li.submenu {
-	padding-left:1em;
-}
 
 dl {
 	text-align:left;
