@@ -67,6 +67,10 @@ div.sidebar ul li:hover{
 	background-color:grey;
 }
 
+div.sidebar ul li:visited {
+	color:#3E6BE2;
+}
+
 div.sidebar ul li.submenu {
 	padding-left:1em;
 }
