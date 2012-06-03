@@ -1,0 +1,12 @@
+    body {
+      font-family:arial, verdana, trebuchet, sans-serif;
+      background-color: #ffffff;
+      color: #000000;
+    }
+
+    table {width:15em; border-collapse:collapse}
+    caption {caption-side:bottom; width:15em; padding-top:0.5em}
+    caption span {font-size:smaller}
+    td {border:solid thin black; padding:0.5em}
+    p {margin-bottom: 1em}
+	p.revision {text-align:right; font-style:italic}

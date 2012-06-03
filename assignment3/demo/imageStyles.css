@@ -1,0 +1,30 @@
+    div.imgHolder {
+      width:570px;
+      margin:0 auto;
+      text-align:center;
+    }
+
+    div.imgHolder p.caption {
+      font-size:smaller;
+      font-weight:bold;
+    }
+
+    div.imgHolder img {
+      border-top-width:4px;
+      border-top-color: #cccccc;
+      border-top-style: solid;
+      border-left-width:4px;
+      border-left-color: #cccccc;
+      border-left-style: solid;
+      border-right-width:4px;
+      border-right-color: #888888;
+      border-right-style: solid;
+      border-bottom-width:4px;
+      border-bottom-color: #888888;
+      border-bottom-style: solid;
+    }
+
+    div.imgHolder p.caption img {
+      border-width:0; margin-right:0.5em;
+    }
+
