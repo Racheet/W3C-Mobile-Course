@@ -11,6 +11,8 @@
     p {margin-bottom: 1em}
 	p.revision {text-align:right; font-style:italic}
 
+	h1 {text-align:center;}
+	
     div.imgHolder {
       width:570px;
       margin:0 auto;
@@ -55,4 +57,20 @@
 		background-repeat:no-repeat;
 	}
 	
-	
+	div#oldworld-parliaments {
+		width:584px; 
+		height:208px;
+		border-top-width:4px;
+		border-top-color: #cccccc;
+		border-top-style: solid;
+		border-left-width:4px;
+		border-left-color: #cccccc;
+		border-left-style: solid;
+		border-right-width:4px;
+		border-right-color: #888888;
+		border-right-style: solid;
+		border-bottom-width:4px;
+		border-bottom-color: #888888;
+		border-bottom-style: solid;
+		margin: 0 auto;
+	 }
