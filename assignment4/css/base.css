@@ -32,9 +32,9 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 13px; line-height: 1.231; }
+body { margin: 0; font-size: 16px; line-height: 1.25; }
 
-body, button, input, select, textarea { font-family: sans-serif; color: #222; }
+body, button, input, select, textarea { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; color: #222; }
 
 
 
@@ -202,15 +202,69 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Racheet
    ========================================================================== */
+h1 {
+    padding:0;
+    display:inline;
+    font-size:1.25em;
+    font-weight:normal;
+    }
+    
+header {
+    margin: 1.75em 1.3em;    
+    border-bottom: 1px solid grey;
+    height:4.4em;
+}
 
+header div {
+    float:left;  
+    width:28em;
+    height:4.4em;
+    color:#545454;
+}
 
+header p {
+    margin: 0 0 0 2.8em;
+    font-size: 1.25em;
+    font-weight:normal;
+}
 
+header .subhead {
+    display:inline;    
+}
 
+nav {
+    float:right;
+    width:30em;
+    height:4.4em;
+    padding-top:1.45em;
+}
+    
+nav ul li {
+    display: block;
+    float:right;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;   
+    width: 9em;
+}
 
+nav ul li a {
+    text-decoration: none;    
+    font-size:0.75em;    
+    display: block;
+    color: #545454;
+    letter-spacing: 1px;
+}
 
-
-
-
+nav ul li a em {
+   display: block;
+   font-size: 75%;
+   text-transform: none;
+   font-style: normal;
+   font-weight: normal;
+   margin-top:0.25em;
+    
+}   
 
 
 
