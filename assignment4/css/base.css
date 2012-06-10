@@ -346,6 +346,13 @@ footer p {
     font-size: 0.75em;  
 }
 
+footer nav li a{
+    background-image: url("../img/linkedin15px.jpg");
+    background-position: center left;
+    background-repeat: no-repeat;
+    padding-left:20px;
+}
+
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
    ========================================================================== */
