@@ -42,9 +42,9 @@ body, button, input, select, textarea { font-family: Constantia, "Lucida Bright"
    Links
    ========================================================================== */
 
-a { color: #00e; }
-a:visited { color: #551a8b; }
-a:hover { color: #06e; }
+a { color: #545454; }
+a:visited { color: #545454; }
+a:hover { color:#000;}
 a:focus { outline: thin dotted; }
 
 /* Improve readability when focused and hovered in all browsers: h5bp.com/h */
@@ -91,7 +91,8 @@ sub { bottom: -0.25em; }
    ========================================================================== */
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0 0 0 40px; }
+dd { margin: 0.4em 2em 1.5em 2em; font-size: 0.75em }
+dt { font-size: 0.8em; margin: 0 2em;}
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
 
@@ -205,7 +206,13 @@ td { vertical-align: top; }
 
 #container {
     width:65em;
-    margin:0 auto;
+    margin:1em auto;
+    border: 1px solid grey;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
 } /* This should only go in the largest (desktop) stylesheet. Make sure to take it out */
 
 h1 {
@@ -240,8 +247,16 @@ header p {
     font-weight:normal;
 }
 
+header p em {
+    color: green;
+}
+
 header .subhead {
     display:inline;    
+}
+
+header p.subhead em {
+    color: red;
 }
 
 nav {
@@ -291,8 +306,9 @@ img.pullout-image {
 
 div#main {
     color:#565656;
-    font-family: "minion-pro", sans-serif;    
-    line-height: 1.25;
+    font-family: "ratio", serif;    
+    font-weight: 400;
+    line-height: 1.7;
 }
 div#main p, div#main h2 {
    width:30em;
@@ -308,20 +324,36 @@ div#bottom-content {
     clear:both;
     margin: 0 1.4em;
     padding:1.25em 0 3em 0;
+    line-height:1.2;
 }
 
 div.box-out {
     float:left;
     padding:1em;
     width: 28%;
-    height: 8.5em;
     -moz-border-radius:2em;
     -o-border-radius:2em;
     -webkit-border-radius:2em;
     -ms-border-radius:2em;
      border-radius: 2em;
-     background-color: #565656;
+     background: #FFF;
      background-color: rgba(86, 86, 86, 0.1);
+     height: 23.375em;
+}
+
+div#bottom-content div.box-out p {
+    margin: 0 auto 0.5em auto;
+}
+
+div#bottom-content div.box-out dl dd p {
+    padding-left:0;
+    padding-top:0.5em;
+    width:inherit;
+}
+
+
+cite a {
+    font-style:normal;   
 }
 
 div.center {
