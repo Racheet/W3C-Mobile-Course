@@ -32,7 +32,7 @@ audio:not([controls]) { display: none; }
 
 html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 100%; }
 
-body { margin: 0; font-size: 16px; line-height: 1.25; }
+body { margin: 0; font-size: 12px; line-height: 1.25; }
 
 body, button, input, select, textarea { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; color: #545454; }
 
@@ -91,8 +91,8 @@ sub { bottom: -0.25em; }
    ========================================================================== */
 
 ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
-dd { margin: 0.4em 2em 1.5em 2em; font-size: 0.75em }
-dt { font-size: 0.8em; margin: 0 2em;}
+dd { margin: 0.4em 2em 1.5em 0; font-size: 1em }
+dt { font-size: 1em; margin: 0;}
 nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
 
@@ -204,17 +204,6 @@ td { vertical-align: top; }
    Author: Racheet
    ========================================================================== */
 
-#container {
-    width:65em;
-    margin:1em auto;
-    border: 1px solid grey;
-    -webkit-border-radius: 1em;
-    -moz-border-radius: 1em;
-    -o-border-radius: 1em;
-    -ms-border-radius: 1em;
-    border-radius: 1em;
-} /* This should only go in the largest (desktop) stylesheet. Make sure to take it out */
-
 h1 {
     padding:0;
     display:inline;
@@ -222,20 +211,14 @@ h1 {
     font-weight:normal;
     }
     
-h2 {
-    font-size:1em;   
-    font-weight:normal;
-    margin-bottom:0.25em;
-}
     
 header {
     margin: 1.75em 1.3em;    
     border-bottom: 1px solid grey;
-    height:4.4em;
 }
 
 header div {
-    float:left;  
+    margin-top:1.25em;
     width:28em;
     height:4.4em;
     color:#545454;
@@ -260,11 +243,9 @@ header p.subhead em {
 }
 
 nav {
-    float:right;
-    height:4.4em;
-    padding-top:1.45em;
+    margin-left: 3.5em;
 }
-    
+
 nav ul li {
     display: block;
     float:left;
@@ -283,17 +264,11 @@ nav ul li a {
 }
 
 nav ul li a em {
-   display: block;
-   font-size: 75%;
-   text-transform: none;
-   font-style: normal;
-   font-weight: normal;
-   margin-top:0.25em;
-    
+   display: none;
 }   
 
+
 img.pullout-image {
-    float:right;
     margin-right: 5.6em;
 }
 
@@ -303,39 +278,30 @@ div#main {
     font-weight: 400;
     line-height: 1.7;
 }
-div#main p, div#main h2 {
-   width:30em;
-   padding-left:4.5em;
-}
 
 div#main p {
-    margin-bottom: 1.25em;
-    margin-top:0em;
+   width:30em;
+   margin-bottom:1.25em
+   margin-top:0em;
+}
+
+div#main dt, div#main dd {
+    width: 30em;    
+}
+
+div#top-content {
+    padding-left:4.5em;   
 }
 
 div#bottom-content {
     clear:both;
-    margin: 0 1.4em;
-    padding:1.25em 0 3em 0;
-    line-height:1.2;
+    margin: 0;
+    padding:1.25em 0 3em 4.5em;
 }
 
 div.box-out {
-    float:left;
-    padding:1em;
-    width: 28%;
-    -moz-border-radius:2em;
-    -o-border-radius:2em;
-    -webkit-border-radius:2em;
-    -ms-border-radius:2em;
-     border-radius: 2em;
-     background: #FFF;
-     background-color: rgba(86, 86, 86, 0.1);
-     height: 23.375em;
-}
 
-div#bottom-content div.box-out p {
-    margin: 0 auto 0.5em auto;
+    background: #FFF;
 }
 
 div#bottom-content div.box-out dl dd p {
@@ -350,10 +316,11 @@ cite a {
 }
 
 div.center {
-    margin: 0 3%;
+    margin: 1.25em 0;
 }
 
 footer {
+height:3.5em;
 margin: 0 1.3em;
 clear: both;
 border-top: 1px solid grey;

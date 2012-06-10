@@ -1,0 +1,112 @@
+body { margin: 0; font-size: 16px; line-height: 1.25; }
+
+dd { margin: 0.4em 2em 1.5em 2em; font-size: 0.75em }
+dt { font-size: 0.8em; margin: 0 2em;}
+
+#container {
+    width:65em;
+    margin:1em auto;
+    border: 1px solid grey;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    -o-border-radius: 1em;
+    -ms-border-radius: 1em;
+    border-radius: 1em;
+} 
+
+header {
+    margin: 1.75em 1.3em; 
+    height:4.4em;
+    border-bottom: none;
+}
+
+header div {
+    float: left;   
+}
+    
+
+
+nav {
+    height:4.4em;
+    padding-top:1.45em;
+}
+
+    
+nav ul li {
+    display: block;
+    float:left;
+    padding: 0;
+    text-transform: uppercase;
+    font-weight: bold;   
+    padding-right:2.5em;
+}
+
+nav ul li a {
+    text-decoration: none;    
+    font-size:0.75em;    
+    display: block;
+    color: #545454;
+    letter-spacing: 1px;
+}
+
+nav ul li a em {
+   display: block;
+   font-size: 75%;
+   text-transform: none;
+   font-style: normal;
+   font-weight: normal;
+   margin-top:0.25em;
+    
+}  
+
+
+div#bottom-content {
+    clear:both;
+    margin: 0 1.4em;
+    padding:1.25em 0 3em 0;
+    line-height:1.2;
+}
+
+div#main dt, div#main dd {
+    width: 18em;    
+}
+
+
+div.box-out {
+    margin:0em;
+    float:left;
+    padding: 1em;
+    width: 28%;
+    -moz-border-radius:2em;
+    -o-border-radius:2em;
+    -webkit-border-radius:2em;
+    -ms-border-radius:2em;
+     border-radius: 2em;
+     background: #FFF;
+     background-color: rgba(86, 86, 86, 0.1);
+     height: 23.375em;
+}
+
+div#bottom-content div.box-out p {
+    margin: 0 auto 0.5em auto;
+    padding-left:4.5em;
+}
+
+div#bottom-content div.box-out dl dd p {
+    padding-left:0;
+    padding-top:0.5em;
+    width:inherit;
+}
+
+
+cite a {
+    font-style:normal;   
+}
+
+div.center {
+    margin: 0 3%;
+}
+
+footer {
+    border-top: none;
+}
