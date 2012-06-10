@@ -279,13 +279,7 @@ div#main {
     line-height: 1.7;
 }
 
-div#main p {
-   width:30em;
-   margin-bottom:1.25em
-   margin-top:0em;
-}
-
-div#main dt, div#main dd {
+div#main p, div#main dt, div#main dd {
     width: 30em;    
 }
 
