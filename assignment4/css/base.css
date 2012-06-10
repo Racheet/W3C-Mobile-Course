@@ -34,7 +34,7 @@ html { font-size: 100%; -webkit-text-size-adjust: 100%; -ms-text-size-adjust: 10
 
 body { margin: 0; font-size: 16px; line-height: 1.25; }
 
-body, button, input, select, textarea { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; color: #222; }
+body, button, input, select, textarea { font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida, "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif; color: #545454; }
 
 
 
@@ -307,7 +307,7 @@ div#main p {
 div#bottom-content {
     clear:both;
     margin: 0 1.4em;
-    padding-top:1.25em;
+    padding:1.25em 0 3em 0;
 }
 
 div.box-out {
@@ -326,6 +326,24 @@ div.box-out {
 
 div.center {
     margin: 0 3%;
+}
+
+footer {
+margin: 0 1.3em;
+clear: both;
+border-top: 1px solid grey;
+}
+
+footer nav, footer p {
+    float: left;
+    display: inline;
+    margin:0 0 0 1.25em;
+    padding-top: 1em;
+}
+
+footer p {
+    float: right;
+    font-size: 0.75em;  
 }
 
 /* ==|== non-semantic helper classes ========================================
