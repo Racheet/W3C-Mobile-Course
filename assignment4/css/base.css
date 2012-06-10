@@ -202,12 +202,24 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Racheet
    ========================================================================== */
+
+#container {
+    width:65em;
+    margin:0 auto;
+} /* This should only go in the largest (desktop) stylesheet. Make sure to take it out */
+
 h1 {
     padding:0;
     display:inline;
     font-size:1.25em;
     font-weight:normal;
     }
+    
+h2 {
+    font-size:1em;   
+    font-weight:normal;
+    margin-bottom:0.25em;
+}
     
 header {
     margin: 1.75em 1.3em;    
@@ -234,18 +246,17 @@ header .subhead {
 
 nav {
     float:right;
-    width:30em;
     height:4.4em;
     padding-top:1.45em;
 }
     
 nav ul li {
     display: block;
-    float:right;
+    float:left;
     padding: 0;
     text-transform: uppercase;
     font-weight: bold;   
-    width: 9em;
+    padding-right:2.5em;
 }
 
 nav ul li a {
@@ -266,11 +277,56 @@ nav ul li a em {
     
 }   
 
+img.pullout-image {
+    border:1px solid #545454;
+    float:right;
+    margin-right: 5.6em;
+    width:277px;
+    -webkit-transform: scaleX(-1);
+    -ms-transform:scaleX(-1);
+    -moz-transform:scaleX(-1);
+    -o-transform:scaleX(-1);
+    transform: scaleX(-1);
+ }
 
+div#main {
+    color:#565656;
+    font-family: "minion-pro", sans-serif;    
+    line-height: 1.25;
+}
+div#main p, div#main h2 {
+   width:30em;
+   padding-left:4.5em;
+}
 
+div#main p {
+    margin-bottom: 1.25em;
+    margin-top:0em;
+}
 
+div#bottom-content {
+    clear:both;
+    margin: 0 1.4em;
+    padding-top:1.25em;
+}
 
+div.box-out {
+    float:left;
+    padding:1em;
+    width: 28%;
+    height: 8.5em;
+    -moz-border-radius:2em;
+    -o-border-radius:2em;
+    -webkit-border-radius:2em;
+    -ms-border-radius:2em;
+     border-radius: 2em;
+     background-color: #565656;
+     background-color: rgba(86, 86, 86, 0.1);
+}
 
+div.center {
+    margin: 0 3%;
+}
 
 /* ==|== non-semantic helper classes ========================================
    Please define your styles before this section.
