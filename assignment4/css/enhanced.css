@@ -1,7 +1,41 @@
-body { margin: 0; font-size: 14px; line-height: 1.25; }
+body { margin: 0; font-size: 13px; line-height: 1.25; }
+
+#container {
+    width: auto;   
+}
 
 nav { float:right;}
 
 img.pullout-image {
     float:right;
+}
+
+div#main dt, div#main dd {
+    width: auto;    
+}
+
+dl div {
+    float: left;
+    width: 29%;
+    margin: 0 auto;
+    padding: 1em;
+}
+
+dd {
+    margin: 1em 0 1.5em 0;
+}
+
+dt {
+    height:3.28em;   
+}
+
+div.box-out dl {
+    -moz-border-radius:2em;
+    -o-border-radius:2em;
+    -webkit-border-radius:2em;
+    -ms-border-radius:2em;
+     border-radius: 2em;
+     background: #FFF;
+     background-color: rgba(86, 86, 86, 0.1);
+     margin-right:1.3em;
 }
