@@ -27,6 +27,7 @@ img.pullout-image {
 
 div#main dt, div#main dd {
     width: auto;    
+    line-height: 1.25;
 }
 
 dl div {
