@@ -4,6 +4,10 @@ body { margin: 0; font-size: 13px; line-height: 1.25; }
     width: auto;   
 }
 
+header div {
+    width:28em;    
+}
+
 div#main {
     margin:0;
 }
@@ -24,6 +28,11 @@ img.pullout-image {
     float:right;
     margin-right: 5.6em;
 }
+
+div#main p, div#main dt, div#main dd {
+    width: 30em;    
+}
+
 
 div#main dt, div#main dd {
     width: auto;    

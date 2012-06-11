@@ -224,7 +224,6 @@ header {
 
 header div {
     margin-top:1.25em;
-    width:28em;
     height:4.4em;
     color:#545454;
 }
@@ -277,9 +276,6 @@ div#main {
     margin: 0 1.3em;
 }
 
-div#main p, div#main dt, div#main dd {
-    width: 30em;    
-}
 
 
 div.box-out {
