@@ -2,6 +2,9 @@
     width: auto;   
 }
 
+h2 {
+    font-weight:normal;
+}
 header div {
     width:28em; 
 }
@@ -50,11 +53,12 @@ dl div {
 }
 
 dd {
-    margin: 1em 0 1.5em 0;
+    margin: 0 0 1.5em 0;
 }
 
 dt {
     height:3.28em;   
+    padding-bottom:0.5em;
 }
 
 div.box-out {
