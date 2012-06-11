@@ -96,9 +96,23 @@ h1 {
     font-weight:normal;
     }
 
-footer p {
-    float:right;   
+ 
+footer nav {
+    padding-top:0.75em;
 }
+
+footer p {
+    float:right;
+    font-size: 0.75em;  
+    padding-left:0.5em;
+    padding-top: 1.25em;
+}
+
+footer nav ul li{
+    width: auto;
+    padding-bottom:0;
+}
+
 
 @media all and (min-width: 720px) {
   body { margin: 0; font-size: 13px; line-height: 1.25; }

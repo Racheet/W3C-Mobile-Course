@@ -312,7 +312,7 @@ footer nav, footer p {
 }
 
 footer nav {
-    padding-top:0.75em;
+    padding-top:1em;
 }
 
 footer p {
@@ -329,6 +329,12 @@ footer nav li a{
     padding-top: 5px;
     margin-top: 0.25em;
     height:16px;
+}
+
+
+footer nav ul li{
+    width: 100%;
+    padding-bottom:1em;
 }
 
 footer nav li a#linkedin{
