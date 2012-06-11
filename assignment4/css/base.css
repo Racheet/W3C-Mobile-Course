@@ -309,22 +309,34 @@ footer nav, footer p {
     float: left;
     display: inline;
     margin:0 0 0 1.25em;
-    padding-top: 1em;
+}
+
+footer nav {
+    padding-top:0.75em;
 }
 
 footer p {
     float: left;
     font-size: 0.75em;  
     padding-left:0.5em;
+    padding-top: 1.25em;
 }
 
 footer nav li a{
-    background-image: url("../img/linkedin15px.jpg");
     background-position: center left;
     background-repeat: no-repeat;
     padding-left:20px;
+    margin-top: 0.25em;
+    height:16px;
 }
 
+footer nav li a#linkedin{
+   background-image: url("../img/linkedin15px.jpg");
+}
+
+footer nav li a#github{
+    background-image: url("../img/github.jpg");
+}
 
 @media all and (min-width: 420px) {
 footer p { float:right; }
