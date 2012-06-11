@@ -318,8 +318,7 @@ footer nav {
 footer p {
     float: left;
     font-size: 0.75em;  
-    padding-left:0.5em;
-    padding-top: 1.25em;
+    padding: 1.25em 0 1.25em 0.5em;
 }
 
 footer nav li a{
