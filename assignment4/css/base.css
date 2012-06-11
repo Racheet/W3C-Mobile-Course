@@ -209,12 +209,17 @@ td { vertical-align: top; }
 }
 
 h1 {
+    margin: 0 0 0 2.8em;
     padding:0;
     display:inline;
     font-size:1.25em;
     font-weight:normal;
     }
     
+h2 {
+    font-weight:normal;
+    font-size:1em;
+}
     
 header {
     margin: 1.75em 1.3em;    
@@ -242,7 +247,7 @@ header .subhead {
     display:inline;    
 }
 
-header p.subhead em {
+header h1.subhead em {
     color: red;
 }
 
@@ -316,9 +321,6 @@ cite a {
     font-style:normal;   
 }
 
-div.center {
-    margin: 1.25em 0;
-}
 
 footer {
 height:3.5em;

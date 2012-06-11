@@ -39,3 +39,7 @@ div.box-out dl {
      background-color: rgba(86, 86, 86, 0.1);
      margin-right:1.3em;
 }
+
+div.center {
+    margin: 1.25em 0;
+}
