@@ -5,15 +5,20 @@ body { margin: 0; font-size: 13px; line-height: 1.25; }
 }
 
 header div {
-    width:28em;    
+    width:28em; 
 }
 
+header p {
+    display:block;   
+}
+    
 div#main {
     margin:0;
 }
 
 div#top-content {
-    padding-left:4.5em;   
+    padding-left:4.5em;
+    border:none;
 }
 
 div#bottom-content {
@@ -67,6 +72,7 @@ div.box-out dl {
 
 div.center {
     margin: 1.25em 0;
+    border: none;
 }
 
 

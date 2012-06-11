@@ -224,11 +224,12 @@ header {
 
 header div {
     margin-top:1.25em;
-    height:4.4em;
+    padding-bottom: 1.35em;
     color:#545454;
 }
 
 header p {
+    display:inline;
     margin: 0;
     font-size: 1.25em;
     font-weight:normal;
