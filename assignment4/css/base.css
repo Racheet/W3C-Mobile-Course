@@ -229,7 +229,7 @@ header div {
 }
 
 header p {
-    display:inline;
+    display:block;
     margin: 0;
     font-size: 1.25em;
     font-weight:normal;
@@ -280,7 +280,6 @@ div#main {
 
 
 div.box-out {
-
     background: #FFF;
 }
 
@@ -314,8 +313,9 @@ footer nav, footer p {
 }
 
 footer p {
-    float: right;
+    float: left;
     font-size: 0.75em;  
+    padding-left:0.5em;
 }
 
 footer nav li a{
