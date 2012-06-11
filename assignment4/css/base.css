@@ -203,13 +203,9 @@ td { vertical-align: top; }
 /* ==|== primary styles =====================================================
    Author: Racheet
    ========================================================================== */
-#container {
-    width:40em;
-    margin: 0 auto;
-}
 
 h1 {
-    margin: 0 0 0 2.8em;
+    margin: 0;
     padding:0;
     display:inline;
     font-size:1.25em;
@@ -234,7 +230,7 @@ header div {
 }
 
 header p {
-    margin: 0 0 0 2.8em;
+    margin: 0;
     font-size: 1.25em;
     font-weight:normal;
 }
@@ -249,10 +245,6 @@ header .subhead {
 
 header h1.subhead em {
     color: red;
-}
-
-nav {
-    margin-left: 3.5em;
 }
 
 nav ul li {
@@ -277,30 +269,18 @@ nav ul li a em {
 }   
 
 
-img.pullout-image {
-    margin-right: 5.6em;
-}
-
 div#main {
     color:#565656;
     font-family: "ratio", serif;    
     font-weight: 400;
     line-height: 1.7;
+    margin: 0 1.3em;
 }
 
 div#main p, div#main dt, div#main dd {
     width: 30em;    
 }
 
-div#top-content {
-    padding-left:4.5em;   
-}
-
-div#bottom-content {
-    clear:both;
-    margin: 0;
-    padding:1.25em 0 3em 4.5em;
-}
 
 div.box-out {
 

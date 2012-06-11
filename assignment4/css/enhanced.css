@@ -4,10 +4,25 @@ body { margin: 0; font-size: 13px; line-height: 1.25; }
     width: auto;   
 }
 
-nav { float:right;}
+div#main {
+    margin:0;
+}
+
+div#top-content {
+    padding-left:4.5em;   
+}
+
+div#bottom-content {
+    clear:both;
+    margin: 0;
+    padding:1.25em 0 3em 4.5em;
+}
+
+nav { float:right; margin-left: 3.5em;}
 
 img.pullout-image {
     float:right;
+    margin-right: 5.6em;
 }
 
 div#main dt, div#main dd {
@@ -43,3 +58,18 @@ div.box-out dl {
 div.center {
     margin: 1.25em 0;
 }
+
+
+header p {
+    margin: 0 0 0 2.8em;
+    font-size: 1.25em;
+    font-weight:normal;
+}
+
+h1 {
+    margin: 0 0 0 2.8em;
+    padding:0;
+    display:inline;
+    font-size:1.25em;
+    font-weight:normal;
+    }
