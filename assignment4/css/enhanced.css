@@ -17,6 +17,11 @@ div#main {
     margin:0;
 }
 
+.smaller-text {
+    font-size:0.9em;
+    padding-left:0.8em;
+}
+
 div#top-content {
     padding-left:4.5em;
     border:none;
