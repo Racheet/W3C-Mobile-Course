@@ -1,0 +1,102 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>ReadMe</title>
+<style type="text/css">
+body {
+	font: 100%/1.3 Arial, Helvetica, sans-serif;
+}
+</style>
+</head>
+
+<body>
+<h1>A Basic Script to Switch Between Mobile and Desktop Layout</h1>
+<p>This reader is an attachment to a basic PHP-script to switch between a mobile and desktop version of a webpage. The main target for creating this script was to present a working model that can be used for educational purposes. This way it may become clear how such an approach can be realized and students can experience the main functions that we like to emphasize as important, which are:</p>
+<ul>
+  <li>it automatically detects what kind of browser a visitor uses;</li>
+  <li>it presents the appropriate version of the webpage for desktop and mobile;</li>
+  <li>the automated presented desktop and mobile versions of the webpage will use the same filename (One Web);</li>
+  <li>the script allows the visitor to overrule this automatically determined choice;</li>
+  <li>their preference will be stored in a cookie so that at a next visit with the same browser they don&rsquo;t need to use the switch again;</li>
+  <li>since this last function cannot be done without redirection there is a canonical link to the main version of the web page present (One Web).</li>
+</ul>
+<h2>PHP</h2>
+<p>According the PHP there are two things worth mentioning:</p>
+<ul>
+  <li>For the use of the script your server needs to support <strong>PHP 5</strong>.</li>
+  <li>To keep the script out of the HTML as much as possible for this basic method, you will find the main part of the script in the folder named &lsquo;inc&rsquo;, where it is split up in two parts: one is the device detection and the other one is responsible for the switch between presentation of the mobile or desktop version of the webpage.</li>
+</ul>
+<h2>PHP in the HTML page</h2>
+<p>There is some PHP in the webpages though that, to keep this script simple, can&rsquo;t be left out of the HTML:</p>
+<dl>
+  <dt>Line 9</dt>
+  <dd>if your files are in the rootfolder of your site, <code>$subdir</code> has no value written between the quotation marks, like this <code>''</code>; else you name the subdir, like so: <code>'/namesubdir'</code> (note it has a slash at the start, BUT NOT AT THE END!). The sample file suggests to name the folder <code>'switch'</code>, this is the value used in it. This is correct as long as the folder is placed in the root and not in a subfolder; else the value should be <code>'/namesubfolder/switch'</code>.</dd>
+  <dt>Line 10</dt>
+  <dd><code>$subdir = '/switch';</code> This is where the name of the folder needs to be changed according to the name of the folder your files are in (according instruction above)</dd>
+  <dt>Line 11</dt>
+  <dd><code>$cookie_lifetime = 60*60*24*30;</code> What this means is sec x min x hrs x days = how long (in seconds) must the cookie with the user preference persist? You can edit the value of the lifetime of the cookie by changing the numbers.</dd>
+  <dt>Line 26</dt>
+  <dd>Then there is the switch for mobile/desktop content that looks like this:<br />
+    <code>&lt;?php echoSwitch('Desktop Page', 'Mobile Page'); ?&gt;</code><br />
+    The content for either desktop or mobile can be placed between the single quotation marks. In the example above on desktop the content will be Desktop Page and on mobile it will be Mobile Page. You can place this PHP code where ever you like in the content of the webpage, just make sure you paste it from the first &lt; up to the close &gt;.  Any content outside of this will be shown on both desktop and mobile.</li>
+  <dt>Line 34</dt>
+    <dd>Another PHP code begins here that switches desktop/mobile content. If you look closely you will see that the single quotation marks are missing inside the PHP and are replaced with HEREDOC notation. More about this later.</dd>
+</dl>
+<h2>The Content Switch</h2>
+<p>In the page on line 26 the text Desktop Page will be shown on desktop and Mobile Page on mobile. Any content that you place  between the <code>''</code> in teh code will be show on desktop (the first <code>''</code>) or mobile (the second <code>''</code>). If you leave one of them empty, nothing will be shown for that version on that spot. Any content that you place outside of the PHP-code will be shown in both versions, desktop and mobile.</p>
+<p>This needs some discipline of the author, a small error with the caracters of the code will lead to a failing presentation. Some samples to illustratie how it works:</p>
+<ul>
+  <li>Part of the content is outside of the PHP code in the following sample, what will cause this content to be present in both desktop and mobile. The word desktop will be filled in in the desktop content and the word mobile in the mobile content:<br />
+  <code>&lt;p&gt;This page represents the &lt;?php echoSwitch('desktop', 'mobile'); ?&gt;version &lt;/p&gt;</code> </li>
+  <li>There is no mutuel content for desktop and mobile in the following sample, that's why also the HTML tags of the content are placed inside the PHP code. The content part in the PHP code for mobiel remains empty, so that the mobile version will have no content:<br />
+    <code>&lt;?php echoSwitch('&lt;h1&gt;Sample&lt;/h1&gt;&lt;p class='test'&gt;You can use HTML tags and attributes here&lt;/p&gt;', ''); ?&gt;</code><br />
+    Notice the class attribute with the  <code>''</code>. This is the kind of thing you need to be very precise with while placing your content.</li>
+</ul>
+<h3>Organizing longer text blocks</h3>
+<p>If you want to place more content in the above samples things may get a bit complex, so you could decide to organize your code like this:</p>
+<code><p>&lt;?php echoSwitch(<br />
+  //desktop text:<br />
+  '<br />
+  &lt;p class=&quot;test&quot;&gt;Linebreak Test<br />
+  To organize this content <br /> 
+  we use line breaks in the text.&lt;/p&gt;</p>
+<p>', <br />
+  //mobile text:<br />
+  '<br />
+&lt;p&gt;Notice the PHP comment above that begins with the two slashes, also helpful to organize your code.&lt;/p&gt; </p>
+<p>'); ?&gt;</p>
+</code>
+<p>Since the PHP code makes use of single quotation marks <code>'like this'</code> you will need to make clear that any single quotation mark in the <em>content</em> is not part of the PHP script by placing a backslash right before it. The following sample is a basic PHP sample:</p>
+<p><code>&lt;?php echo 'Tim\'s name'; ?&gt;</code><code></code></p>
+<p>On screen you will see 'Tim's name&quot;.</p>
+<p>This makes the method very vulnerable for working with complex content. If the author makes just one simple mistake with the single quotation marks, or forgets to place a backslash like in the sample right above here, the page goes blank. So the next HEREDOC-notation is more fault-proof:</p>
+<code><p>&lt;?php echoSwitch(<br />
+  &lt;&lt;&lt;DESKTOP<br />
+  HTML here. Make sure that &lt;&lt;&lt; DESKTOP is written, exactly as in this sample, all alone on it's own rule, followed with the content on the next rule. At the end of the content  &quot;DESKTOP&quot; should be written, also exactly as it is here, all alone on it's own rule.<br />
+  DESKTOP<br />
+  ,<br />
+  &lt;&lt;&lt;MOBILE<br />
+  HTML here, same principle as above for desktop, only the word is MOBILE.<br />
+  MOBILE<br />
+); ?&gt;</p>
+</code>
+<p> There are no more single quotation marks needed for the PHP, they are replaced by &lt;&lt;&lt;DESKTOP and DESKTOP and &lt;&lt;&lt;MOBILE and MOBILE. This way you can really paste blocks of content without the need of checking it for quotation marks to place backslashes before. Nevertheless... still mind the notation of the PHP itself: the comma between the end of DESKTOP and the beginning of MOBILE is part of the script and  essential. </p>
+<p>By the way: you may use the same HEREDOC notations (that's the name of this method) as many times as you like in one page. So DESKTOP and MOBILE as markers don't need to be unique. <code></code> You may also use &lt;&lt;&lt;D and D and &lt;&lt;&lt;M and M or another variation, that's up to you, just keep the syntax similar.</p>
+<h2>.htaccess</h2>
+<p>For those among you that have the rights to put a .htaccess on the server, you need to do the following:</p>
+<ul>
+  <li>Write your CSS in the files named desktop_styles.css and mobile_styles.css.</li>
+  <li>You can delete the files named desktop_styles.<strong>php</strong> and mobile_styles.<strong>php</strong></li>
+</ul>
+<p>For those among you that are not allowed to work with .htaccess on the server, you need to do the following:</p>
+<ul>
+  <li>Change the link in the web page(s) to the stylesheets from .css to .<strong>php</strong></li>
+  <li>Write your CSS in the files named desktop_styles.php and mobile_styles.php. Be careful to leave the PHP code in the beginning of the stylesheets untouched.</li>
+  <li>You can delete the files named desktop_styles.<strong>css</strong> and mobile_styles.<strong>css</strong></li>
+  <li>You can delete the .htaccess file</li>
+</ul>
+<h2>Creating a webpage</h2>
+<p>Just make sure that any new webpage will be a duplicate of one of the two original ones and you will be fine. Don't forget to fill in the page title for desktop and mobile. There is no need to bother about the canonical link, the script will take care of it. Also the cookie will be placed by the script.</p>
+</body>
+</html>
