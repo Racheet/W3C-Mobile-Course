@@ -82,5 +82,7 @@ footer {
     background-image:url("../img/chevron.gif");
 	background-position:right;
 	background-repeat: no-repeat;
-    width:12em;
+    width:10.5em;
 }
+
+.right-arrow:hover { color:#000;}
