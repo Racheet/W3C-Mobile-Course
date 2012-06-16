@@ -77,3 +77,10 @@ dt {
 footer {
     border-top: none;
 }
+
+.right-arrow {
+    background-image:url("../img/chevron.gif");
+	background-position:right;
+	background-repeat: no-repeat;
+    width:12em;
+}
