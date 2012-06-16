@@ -5,25 +5,24 @@ $(document).ready(function(){
     $("h2").each(function(){$(this).addClass("right-arrow");});
     // Set up click handlers
     (function(){
-        var toggleArrow = function(){
-            var testedObject = $(this);
-            if (testedObject.hasClass("right-arrow")){
-              testedObject.removeClass("right-arrow");
-              testedObject.addClass("down-arrow");
-            } else if (testedObject.hasClass("down-arrow")) {
-              testedObject.removeClass("down-arrow");
-              testedObject.addClass("right-arrow");  
+        var toggleArrow = function(toggledObject){
+            if (toggledObject.hasClass("right-arrow")){
+              toggledObject.removeClass("right-arrow");
+              toggledObject.addClass("down-arrow");
+            } else if (toggledObject.hasClass("down-arrow")) {
+              toggledObject.removeClass("down-arrow");
+              toggledObject.addClass("right-arrow");  
             }
         };
     
         
         $("h2").click(function(){
             $(this).parent().children('dl').toggle();
-            toggleArrow();
+            toggleArrow($(this));
         });
         $('dl').click(function(){
             $(this).toggle();
-            toggleArrow();
+            toggleArrow($(this).parent().children("h2"));
         });
     })();
 });
