@@ -7,7 +7,7 @@
 */
 
 //if your files are in the rootfolder of your site, $subdir has no value written between the quotation marks, like this ''; else you name the subdir, like so: '/namesubdir' (note it has a slash at the start, BUT NOT AT THE END!). This sample suggests to name the folder 'switch', this is the value used below. This is correct as long as the folder is placed in the root and not in a subfolder; else the value should be '/namesubfolder/switch'.
-$subdir = '/switch'; //change this according to the name of the folder your files are in (see also instruction above)
+$subdir = ''; //change this according to the name of the folder your files are in (see also instruction above)
 $cookie_lifetime = 60*60*24*30; //you may change the numbers: sec x min x hrs x days = how long (in seconds) must the cookie with the user preference persist?
 $maxage = 60; //this is the value (in seconds) for the max-age header that the switcher-script sends. This time will determine how long the version op the page in your browser cache will stay unrefreshed. Note: changes in the user preference for the lay-out will only become definitive after this number of seconds.
 
@@ -19,53 +19,141 @@ $file = __FILE__;
 //include required by the mobile-desktop switch script:
 include($root . '/inc/switcher.php');
 ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML Basic 1.1//EN"
-  "http://www.w3.org/TR/xhtml-basic/xhtml-basic11.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<!doctype html>
+<!-- Conditional comment for mobile ie7 blogs.msdn.com/b/iemobile/ -->
+<!--[if IEMobile 7 ]>    <html class="no-js iem7" lang="en"> <![endif]-->
+<!--[if (gt IEMobile 7)|!(IEMobile)]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+
 <head>
-  <title><?php echoSwitch('Desktop Page', 'Mobile Page'); ?></title>
+  <meta charset="utf-8">
+  <title>Racheet Dave</title>
   <link rel="canonical" href="<?php echo $full_path; ?>" />
-  <link rel="stylesheet" type="text/css" href="<?php echoSwitch('screen_styles', 'mobile_styles'); ?>.css" />
+  <meta name="description" content="The personal homepage of Racheet Dave, digital marketer, web analyst and technologist">
+
+  <!-- Mobile viewport optimization h5bp.com/ad -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width">
+
+  <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+  <meta http-equiv="cleartype" content="on">
+
+  <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="all and (min-width: 600px)" />
+  <link rel="stylesheet" type="text/css" href="css/desktop.css" media="all and (min-width: 1080px)" />
+   		
+  <script src="js/libs/modernizr-2.0.6.min.js"></script>
+  
+  <script>
+      var _gaq=[["_setAccount","UA-32389030-1"],["_trackPageview"]];
+      (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.async=1;
+      g.src=("https:"==location.protocol?"//ssl":"//www")+".google-analytics.com/ga.js";
+      s.parentNode.insertBefore(g,s)}(document,"script"));
+  </script>
+  
+  <script type="text/javascript" src="http://use.typekit.com/ywl7kqk.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-<p id="mob_switch"><a href="<?php echo $current_file['basename']; ?>?m=<?php echoSwitch('1', '0'); ?>"><?php echoSwitch('Mobile View', 'Desktop View'); ?></a> (changes will become definitive after a delay of <?php echo $maxage; ?> seconds or a reload of the page)</p>
-<h1><?php echoSwitch('Desktop', 'Mobile'); ?> Presentation</h1>
-<p>This static page represents the <?php echoSwitch('desktop', 'mobile'); ?> presentation of the resource available at <?php echo $full_path; ?>.</p>
-<?php
-echoSwitch(
-<<<DESKTOP
+<a href="<?php echo $current_file['basename']; ?>?m=<?php echoSwitch('1', '0'); ?>"><?php echoSwitch('Mobile View', 'Desktop View'); ?></a> 
+<div id="container" class="clearfix">
+    <header class="cleafix">
+        <nav class="clearfix"><ul>
+        <li><a href="index.html">Home <em>The Quick Sell</em></a></li>
+        <li><a href="work.html">Work <em>My Working Self</em></a></li>
+        <li><a href="play.html">Play <em>Living the Dream</em></a></li>
+        </ul></nav>
+        <div>
+        <p>Hello, I'm <em>Racheet</em></p>
+        <h1 class="subhead">I'm <em>passionate</em> about data driven marketing</h1>
+        </div>
+     </header>
+    <div id="main" role="main">
+    <div id="top-content">
+        <img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325px" height="400px"/>
+        <p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
+        <p>Most of all though, I'm passionate about data driven marketing.</p>
+        <p>I believe it's important that marketers use evidence to support their decisions. I believe access to good data is empowering, it provides people with the context they need to make good decisions. </p>
+        <p>I work as a web analyst, helping my clients to gain the most use they can from the data they have. Perhaps I can help you.</p>
+    </div>
+    <div id="bottom-content" class="clearfix">
+    
+    <div class="box-out clearfix">
+    <h2>Books I've Read</h2>
+    <dl class="clearfix">
+    <div>
+    <dt><cite><a href="http://www.amazon.co.uk/The-Visual-Display-Quantitative-Information/dp/0961392142/">The Visual Display of Quantitative Information</a></cite> by Edward Tufte.</dt>
+    <dd>This book is a classic, and is the most comprehensive review of data presentation best practice currently available. It left me with plenty to think about and use in my day to day work.</dd>
+    </div>
+    <div>
+    <dt><cite><a href="http://www.amazon.co.uk/Show-Me-Numbers-Designing-Enlighten/dp/0970601999/">Show Me the Numbers</a></cite> by Stephen Few</dt>
+    <dd>Stephen sets out in this book to expand on Tufte's principles and apply them to business data, and he does so magnificently.</dd>
+    </div>
+    <div>
+    <dt><cite><a href="http://www.amazon.co.uk/Web-Analytics-An-Hour-Day/dp/0470130652/">Web Analytics: an Hour a Day</a></cite> by Avinash Kaushik</dt>
+    <dd>Avinash does a great job of covering the fundamentals of web analytics practice. This is a great book to read if you want to really understand the nuts and bolts of good analytics practice.</dd>
+    </div>
+    </dl>
+    
+    </div>
+    
+    <div class="box-out center clearfix">
+    <h2>Blogs I Follow</h2>
+    <dl class="clearfix">
+    <div>
+    <dt><cite><a href="http://www.marginhound.com">Marginhound</a></cite> Thoughts on Python, R, and Open Source Analytics</dt>
+    <dd>This blogger has held positions as an analyst, a marketing strategist and as an analytics coder. He doesn't blog often, but when he does, I listen.</dd>
+    </div>
+    <div>
+    <dt><cite><a href="http://adam.webanalyticsdemystified.com/">Adam Greco</a></cite> on Web Analytics Demystified</dt>
+    <dd>Adam is one of the biggest names in the Web Analytics community. I've found his deep knowledge of SiteCatalyst implementation techniques invaluable during my work.</dd>
+    </div>
+    <div>
+    <dt><cite><a href="http://www.kaushik.net/avinash">Occam's Razor</a></cite> by Avinash Kaushik</dt>
+    <dd>A period spent working your way through the back catalogue of Occam's Razor is basically mandatory to be a modern web analyst.</dd>
+    </div>
+    </dl>
+    </div>
+    
+    <div class="box-out clearfix">
+    <h2>My Friends' Websites</h2>
+    <dl class="clearfix">
+    <div>
+    <dt><a href="http://ianrenton.com/">Ian Renton</a></dt>
+    <dd><p>Ian is a UX designer I've known since my university days.</p> <p>I love his simple and playful site design for its focus on high background/text contrast for great usability.</p></dd>
+    </div>
+    <div>
+    <dt><a href="http://www.westministerhubble.com">Westminister hubble</a></dt>
+    <dd>A project of Ian's, this website aggregates all the web activity for each of Westminister's 650 MPs.</dd>
+    </div>
+    <div>
+    <dt><a href="http://davoul.blogspot.co.uk/p/whos-that-what.html">Who's-that-what?</a> by David Mumford</dt>
+    <dd>The personal blog of my artist friend. He runs it as a three-times-a-week competition where he draws a character and asks his readers to guess who it is.</dd>
+    </div>
+    </dl>
+    </div>
+    </div>
+    </div>
+    <footer>
+        <nav><ul>
+        <li><a id="linkedin" href="http://www.linkedin.com/profile/view?id=103970032">Find me on LinkedIn</a></li>
+        <li><a id="github" href="https://github.com/Racheet">Fork me on Github</a></li>
+        </ul></nav>
+        <p>All art by <a href="http://davoul.blogspot.co.uk/p/whos-that-what.html">David Mumford</a>, used with permission.</p>
+    </footer>
+  </div> <!--! end of #container -->
 
-<h2>Content with quotation marks</h2>
-<p id="sample">In 'reprehenderit' in voluptate lorem ipsum dolor sit amet: "consectetur adipisicing elit". Ut aliquip ex ea commodo consequat. Sed do eiusmod tempor incididunt cupidatat non proident, in reprehenderit in voluptate. Ut enim ad minim veniam, ullamco laboris nisi mollit anim id est laborum.</p>
-<p>Eu fugiat nulla pariatur. Duis aute irure dolor lorem ipsum dolor sit amet, sunt in culpa. Velit esse cillum dolore excepteur sint occaecat qui officia deserunt. Eu fugiat nulla pariatur. Duis aute irure dolor in reprehenderit in voluptate ullamco laboris nisi.</p>
-<p>Ut aliquip ex ea commodo consequat. Ut enim ad minim veniam, ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, in reprehenderit in voluptate excepteur sint occaecat. Ut aliquip ex ea commodo consequat. Duis aute irure dolor ut enim ad minim veniam, ullamco laboris nisi.</p>
 
-DESKTOP
-,
-<<<MOBILE
+  <!-- JavaScript at the bottom for fast page loading -->
 
-<h2>Content with quotation marks</h2>
-<p id="sample">In 'reprehenderit' in voluptate lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut aliquip ex ea commodo consequat. Sed do eiusmod tempor incididunt cupidatat non proident, in reprehenderit in voluptate. Ut enim ad minim veniam, ullamco laboris nisi mollit anim id est laborum.</p>
+  <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script src="js/script.js"></script>
 
-MOBILE
-); ?>
-<p><a href="page2.php">PAGE 2</a></p>
-
-<!-- Read this comment about placing content with quotation marks:
-
-Take a look above at for instance in line 26 where is written 'Desktop Page' and 'Mobile Page'. The text Desktop Page will be presented on desktop and the text Mobile Page on mobile. If you replace that text with a larger block of content, then that is the content that wil be presented instead. If that contant contains single quotation marks, you are in trouble: the browser will read these as PHP instead of the HTML you mean it to be.
-
-If content has been placed via the PHP HEREDOC-notation (see the section above with the header 'Content with quotation marks'), then that way quotation marks in the content won't pose a problem anymore. As you can see in that section, that does contain these single quotation marks.
-
-The HEREDOC-notation is done by replacing the start quotation marks with what is written instead at line 36 and at the end at line 43.
-
-It is not impossible to place content in PHP code that uses single quotation marks like in the sample at line 26. All you need to do is place one backslash before any single quotation mark inside the content like this Tim\'s. This will make the browser present the content correctly. It may be clear that using HEREDOC-notation instead for larger pieces of content, is safer.
-
-Note that PHP may use double quotation marks instead of single ones. In that case an HTML attribute like an ID or a class may cause similar problems. You can solve this with a backslash before the double quotaton marks like this id=\"test\".
-
-By the way: you may use the same HEREDOC notations as many times as you like in one page. So DESKTOP and MOBILE as markers don't need to be unique. You may also use just D instead of DESKTOP and just M instead of MOBILE, or another variation, that's up to you, just keep the syntax similar.
-
-End of comment -->
 
 </body>
 </html>

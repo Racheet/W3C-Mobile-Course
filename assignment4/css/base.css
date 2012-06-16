@@ -323,9 +323,12 @@ footer nav {
 }
 
 footer p {
-    float: left;
     font-size: 0.75em;  
     padding: 1.25em 0 1.25em 0.5em;
+}
+
+footer div {
+	float:left;
 }
 
 footer nav li a{
@@ -370,7 +373,7 @@ footer nav li a#github{
 .down-arrow:hover { color:#000;}
 
 @media all and (min-width: 420px) {
-footer p { float:right; }
+footer div { float:right; }
 }
 
 /* ==|== non-semantic helper classes ========================================

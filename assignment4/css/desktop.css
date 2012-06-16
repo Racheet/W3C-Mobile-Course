@@ -78,3 +78,7 @@ footer {
     border-top: none;
 }
 
+#mobileview {
+	display:none
+}
+
