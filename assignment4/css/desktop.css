@@ -1,7 +1,8 @@
 body { margin: 0; font-size: 16px; line-height: 1.25; }
 
-dd { margin: 0.4em 2em 1.5em 2em; font-size: 0.75em }
-dt { font-size: 0.8em; margin: 0 2em;}
+div#main dd, div#main dt{ line-height:1.4;}
+
+h2 {margin:0; padding: 0;}
 
 #container {
     width:65em;
@@ -60,73 +61,17 @@ nav ul li a em {
 }  
 
 
-div#bottom-content {
-    clear:both;
-    margin: 0 1.4em;
-    padding:1.25em 0 3em 0;
-    line-height:1.2;
-}
 
-div#main dt, div#main dd {
-    width: 18em;    
-}
-
-
-div.box-out {
-    margin:0em;
-    float:left;
-    padding: 1em;
-    width: 28%;
-    -moz-border-radius:2em;
-    -o-border-radius:2em;
-    -webkit-border-radius:2em;
-    -ms-border-radius:2em;
-     border-radius: 2em;
-     background: #FFF;
-     background-color: rgba(86, 86, 86, 0.1);
-     height: 23.375em;
-}
-
-div.box-out dl {
-    -moz-border-radius:0em;
-    -o-border-radius:0em;
-    -webkit-border-radius:0em;
-    -ms-border-radius:0em;
-     border-radius: 0em;
-     background: none;
-     background-color: none;
-}
-
-
-div.box-out h2 {
-    margin: 0 auto 0.5em auto;
-    padding-left:4.5em;
-}
-
-div#bottom-content div.box-out dl dd p {
-    padding-left:0;
-    padding-top:0.5em;
-    width:inherit;
-}
-
-dl div {
-    disply:block;
-    float: none;
-    margin:0;
-    padding:0;
-}
-
-dt {
-   height:auto;
-}
-    
-    
 cite a {
     font-style:normal;   
 }
 
-div.center {
-    margin: 0 3%;
+div.box-out {
+    /*margin: 0 3%;*/
+}
+
+dt {
+    height:auto;
 }
 
 footer {
