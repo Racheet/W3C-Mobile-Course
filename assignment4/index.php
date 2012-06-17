@@ -44,7 +44,13 @@ include($root . '/inc/switcher.php');
   <link rel="stylesheet" type="text/css" href="css/<?php echoSwitch('base.css', 'base-mobile.css'); ?>">
   <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="all and (min-width: 600px)" />
   <link rel="stylesheet" type="text/css" href="css/desktop.css" media="all and (min-width: 1080px)" />
-   		
+ 
+  <!--[if lt IE 9 & !IEMobile]>
+
+	<link rel="stylesheet" type="text/css" href="css/enhanced.css" />
+	<link rel="stylesheet" type="text/css" href="css/desktop.css" />
+
+  <![endif]--> 
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
   
   <script>
@@ -73,7 +79,7 @@ include($root . '/inc/switcher.php');
     <div id="main" role="main">
     <div id="top-content">
 		<?php echoSwitch('<img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325px" height="400px"/>', '<img class="pullout-image" src="img/dalektea-tiny.jpg" alt="A picture of a Dalek offering tea" width="120px" height="148px"/>'); ?>
-        <p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
+		<p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
         <p>Most of all though, I'm passionate about data driven marketing.</p>
         <p>I believe it's important that marketers use evidence to support their decisions. I believe access to good data is empowering, it provides people with the context they need to make good decisions. </p>
         <p>I work as a web analyst, helping my clients to gain the most use they can from the data they have. Perhaps I can help you.</p>
@@ -153,7 +159,7 @@ include($root . '/inc/switcher.php');
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
   <?php echoSwitch('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
+  <script>window.jQuery || document.write(\'<script src="js/libs/jquery-1.7.1.min.js"><\/script>\')</script>
   <script src="js/script.js"></script>', ''); ?>
 
 

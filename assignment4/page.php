@@ -41,10 +41,16 @@ include($root . '/inc/switcher.php');
   <!-- more tags for your 'head' to consider h5bp.com/d/head-Tips -->
 
   <!-- Main Stylesheet -->
-  <link rel="stylesheet" type="text/css" href="css/base.css">
+  <link rel="stylesheet" type="text/css" href="css/<?php echoSwitch('base.css', 'base-mobile.css'); ?>">
   <link rel="stylesheet" type="text/css" href="css/enhanced.css" media="all and (min-width: 600px)" />
   <link rel="stylesheet" type="text/css" href="css/desktop.css" media="all and (min-width: 1080px)" />
-   		
+ 
+  <!--[if lt IE 9 & !IEMobile]>
+
+	<link rel="stylesheet" type="text/css" href="css/enhanced.css" />
+	<link rel="stylesheet" type="text/css" href="css/desktop.css" />
+
+  <![endif]--> 
   <script src="js/libs/modernizr-2.0.6.min.js"></script>
   
   <script>
@@ -58,13 +64,12 @@ include($root . '/inc/switcher.php');
   <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
 </head>
 <body>
-<a href="<?php echo $current_file['basename']; ?>?m=<?php echoSwitch('1', '0'); ?>"><?php echoSwitch('Mobile View', 'Desktop View'); ?></a> 
 <div id="container" class="clearfix">
     <header class="cleafix">
         <nav class="clearfix"><ul>
-        <li><a href="index.html">Home <em>The Quick Sell</em></a></li>
-        <li><a href="work.html">Work <em>My Working Self</em></a></li>
-        <li><a href="play.html">Play <em>Living the Dream</em></a></li>
+        <li><a href="index.php">Home<?php echoSwitch(' <em>The Quick Sell</em>', ''); ?> </a></li>
+        <li><a href="work.php">Work<?php echoSwitch(' <em>My Working Self</em>', ''); ?></a></li>
+        <li><a href="play.php">Play<?php echoSwitch(' <em>Living the Dream</em>', ''); ?></a></li>
         </ul></nav>
         <div>
         <p>Hello, I'm <em>Racheet</em></p>
@@ -73,8 +78,8 @@ include($root . '/inc/switcher.php');
      </header>
     <div id="main" role="main">
     <div id="top-content">
-        <img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325px" height="400px"/>
-        <p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
+		<?php echoSwitch('<img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325px" height="400px"/>', '<img class="pullout-image" src="img/dalektea-tiny.jpg" alt="A picture of a Dalek offering tea" width="120px" height="148px"/>'); ?>
+		<p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
         <p>Most of all though, I'm passionate about data driven marketing.</p>
         <p>I believe it's important that marketers use evidence to support their decisions. I believe access to good data is empowering, it provides people with the context they need to make good decisions. </p>
         <p>I work as a web analyst, helping my clients to gain the most use they can from the data they have. Perhaps I can help you.</p>
@@ -142,7 +147,10 @@ include($root . '/inc/switcher.php');
         <li><a id="linkedin" href="http://www.linkedin.com/profile/view?id=103970032">Find me on LinkedIn</a></li>
         <li><a id="github" href="https://github.com/Racheet">Fork me on Github</a></li>
         </ul></nav>
-        <p>All art by <a href="http://davoul.blogspot.co.uk/p/whos-that-what.html">David Mumford</a>, used with permission.</p>
+        <div>
+		<p>All art by <a href="http://davoul.blogspot.co.uk/p/whos-that-what.html">David Mumford</a>, used with permission.</p>
+		<p id="mobileview"><a href="<?php echo $current_file['basename']; ?>?m=<?php echoSwitch('1', '0'); ?>"><?php echoSwitch('Switch to Mobile View', 'Switch to Desktop View'); ?></a></p>
+		</div>
     </footer>
   </div> <!--! end of #container -->
 
@@ -150,9 +158,9 @@ include($root . '/inc/switcher.php');
   <!-- JavaScript at the bottom for fast page loading -->
 
   <!-- Grab Google CDN's jQuery, with a protocol relative URL; fall back to local if necessary -->
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="js/libs/jquery-1.7.1.min.js"><\/script>')</script>
-  <script src="js/script.js"></script>
+  <?php echoSwitch('<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+  <script>window.jQuery || document.write(\'<script src="js/libs/jquery-1.7.1.min.js"><\/script>\')</script>
+  <script src="js/script.js"></script>', ''); ?>
 
 
 </body>

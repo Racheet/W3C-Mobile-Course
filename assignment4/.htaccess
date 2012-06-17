@@ -1,3 +1,8 @@
+<FilesMatch ".(css)$">
+Header set Expires "Thu, 15 Apr 2040 20:00:00 GMT"
+Header set Content-Type "text/css; charset=utf-8"
+Header set Cache-Control "max-age=1100,public"
+</FilesMatch>
 # Enable the mod_expires module
 ExpiresActive On 
 # Set expiration date to 1 month for all style sheets and images
@@ -5,12 +10,10 @@ ExpiresByType image/jpeg "access plus 1 month"
 ExpiresByType image/gif "access plus 1 month"
 ExpiresByType image/png "access plus 1 month"
 # Set expiration date to 1 week for all HTML pages 
+ExpiresByType application/javascript "access plus 1 months"
 ExpiresByType text/html "access plus 1 week"
 ExpiresByType application/xhtml+xml "access plus 1 week"
-
-<FilesMatch ".(css)$">
-Header set Expires "Thu, 15 Apr 2040 20:00:00 GMT"
-Header set Content-Type "text/css; charset=utf-8"
-Header set Cache-Control "max-age=1100"
-</FilesMatch>
-DirectoryIndex index.php index.html
+DirectoryIndex index.php index.html index.htm
+<filesMatch "\.(ico|pdf|flv|jpg|jpeg|png|gif|js|swf)$">
+Header set Cache-Control "max-age=290304000, public"
+</filesMatch>
