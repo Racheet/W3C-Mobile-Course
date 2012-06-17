@@ -3,3 +3,4 @@ Header set Expires "Thu, 15 Apr 2040 20:00:00 GMT"
 Header set Content-Type "text/css; charset=utf-8"
 Header set Cache-Control "max-age=1100"
 </FilesMatch>
+DirectoryIndex index.php index.html
