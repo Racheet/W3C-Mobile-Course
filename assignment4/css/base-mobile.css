@@ -351,27 +351,29 @@ footer nav ul li{
 }
 
 footer nav li a#linkedin{
-   background-image: url("../img/linkedin15px.jpg");
+   background-image: url("../img/css-sprite.gif");
+   background-position: 0 -121px;
 }
 
 footer nav li a#github{
-    background-image: url("../img/github.jpg");
+    background-image: url("../img/css-sprite.gif");
+	background-position: 0 -76px;
 }
 
 .right-arrow {
-    background-image:url("../img/chevron.gif");
-    background-position:right;
+    background-image: url("../img/css-sprite.gif");
+    background-position: right -30px;
 	background-repeat: no-repeat;
-    width:10.5em;
+    width:10.75em;
 }
 
 .right-arrow:hover { color:#000;}
 
 .down-arrow {
-    background-image:url("../img/chevron-down.gif");
-    background-position:right;
+    background-image: url("../img/css-sprite.gif");
+    background-position:98% 10px;
 	background-repeat: no-repeat;
-    width:10.5em;
+    width:10.75em;
 }
 
 .down-arrow:hover { color:#000;}

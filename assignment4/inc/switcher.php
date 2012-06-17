@@ -17,6 +17,7 @@ header("Vary: User-Agent, Accept");
 $base = "http://" . $_SERVER['SERVER_NAME'] . preg_replace("/[^\/]*(\?.*)?$/", "", $_SERVER['REQUEST_URI']);
 
 $mobile_browser = 0;
+$tablet_browser = 0;
 $display_mode_changed = false;
 
 if (isset($_GET['m']) && in_array($_GET['m'], Array("0", "1"))) { // We have a value directly from the user that we need to store
@@ -37,9 +38,10 @@ elseif (isset($_COOKIE['m']) && $_COOKIE['m'] == "0") { //forced Desktop View
 }
 
 else {						// No indication of user preference
-  include($root . "/inc/mobile_detection_class.php");	// include the detector script
+  include($root . "/inc/Mobile_Detect.php");	// include the detector script
   $detect = new Mobile_Detect();
   $mobile_browser = $detect->isMobile(); //returns 0 or 1
+  $tablet_browser = $detect->isTablet(); //returns 0 or 1
 }		//OK, we're done. We know which version we want so let's return it
 
 
@@ -72,7 +74,8 @@ function echoMobile($text) {
 
 function echoSwitch ($desktoptext, $mobiletext) {
 	global $mobile_browser;
-	if ($mobile_browser > 0 ) {
+	global $tablet_browser;
+	if ($mobile_browser > 0 && $tablet_browser == 0) {
 		echo $mobiletext;
 	}
 	else echo $desktoptext;
