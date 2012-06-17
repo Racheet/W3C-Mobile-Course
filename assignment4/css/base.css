@@ -277,6 +277,12 @@ div#main {
     margin: 0 1.3em;
 }
 
+img.pullout-image {
+    float:right;
+	width:120px;
+	height:auto;
+}
+
 div#top-content h2{
     padding-top:1em;
 }

@@ -38,6 +38,8 @@ nav { float:right; margin-left: 3.5em;}
 img.pullout-image {
     float:right;
     margin-right: 5.6em;
+	width: auto;
+	height: auto;
 }
 
 div#main p, div#main dt, div#main dd {
