@@ -78,7 +78,7 @@ include($root . '/inc/switcher.php');
      </header>
     <div id="main" class="smaller-text" role="main">
     <div id="top-content">
-		<?php echoSwitch('<img class="pullout-image" src="img/helper.jpg" alt="A picture of a flustered robot" width="277px" height="684px"/>', '<img class="pullout-image" src="img/helper-tiny.jpg" alt="A picture of a flustered robot" width="120px" height="296px"/>'); ?>
+		<?php echoSwitch('<img class="pullout-image" src="img/helper.jpg" alt="A picture of a flustered robot" width="277" height="684"/>', '<img class="pullout-image" src="img/helper-tiny.jpg" alt="A picture of a flustered robot" width="120" height="296"/>'); ?>
         <p>My job is to help people gain insight into their digital communications. I love to work with people, and I think it's important to help my clients learn the skills they need to own their own analytics.</p>
         <p>I specialise in providing training and consultancy to digital teams to help them expand their analytics capability.</p>
         <h2>Services I provide</h2>

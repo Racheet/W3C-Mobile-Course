@@ -82,7 +82,7 @@ include($root . '/inc/switcher.php');
      </header>
     <div id="main" role="main">
     <div id="top-content">
-        <?php echoSwitch('<img class="pullout-image" src="img/duude.jpg" alt="A picture of a heroic penguin" width="277px" height="284px"/>', '<img class="pullout-image" src="img/duude-tiny.jpg" alt="A picture of a heroic penguin" width="120px" height="123px"/>'); ?>
+        <?php echoSwitch('<img class="pullout-image" src="img/duude.jpg" alt="A picture of a heroic penguin" width="277" height="284"/>', '<img class="pullout-image" src="img/duude-tiny.jpg" alt="A picture of a heroic penguin" width="120" height="123"/>'); ?>
         <p>I love to spend my time learning new things. I think its very important to leave each day a little better at something than I was when I started it.</p>
         <p>  I study all sorts of things, but I'm particularly fond of learning new technologies that help me create beautiful websites.</p>
         
