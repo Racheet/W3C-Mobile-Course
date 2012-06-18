@@ -78,7 +78,7 @@ include($root . '/inc/switcher.php');
      </header>
     <div id="main" role="main">
     <div id="top-content">
-		<?php echoSwitch('<img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325px" height="400px"/>', '<img class="pullout-image" src="img/dalektea-tiny.jpg" alt="A picture of a Dalek offering tea" width="120px" height="148px"/>'); ?>
+		<?php echoSwitch('<img class="pullout-image" src="img/dalektea.jpg" alt="A picture of a Dalek offering tea" width="325" height="400"/>', '<img class="pullout-image" src="img/dalektea-tiny.jpg" alt="A picture of a Dalek offering tea" width="120" height="148"/>'); ?>
 		<p>It's not the only thing I'm passionate about. I'm also passionate about Daleks, vegetarian food, swordplay and taking long evening walks through the English countryside.
         <p>Most of all though, I'm passionate about data driven marketing.</p>
         <p>I believe it's important that marketers use evidence to support their decisions. I believe access to good data is empowering, it provides people with the context they need to make good decisions. </p>
